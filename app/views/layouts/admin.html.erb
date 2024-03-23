@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>App</title>
+    <title>Admin</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,8 +12,13 @@
   </head>
 
   <body>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <%= yield %>
+    <main class="flex">
+      <div class="flex w-full">
+        <%= render partial: "admin/sidebar_links" %>
+        <div class="w-full p-8">
+        <%= yield %>
+        </div>
+      </div>
     </main>
   </body>
 </html>
